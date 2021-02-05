@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #3a9753;
+  --primary-darker-color: #275834;
+  --secondary-color: #5B00B8;
+  --secondary-darker-color: #4d009b;
+  --gray-color: #eeeeee;
+  --dark-color: #474747;
+
+  --default-shadow: 0px 4px 4px rgba(0, 0, 0, 0.23);
+  --default-border-radius: 0.4rem;
+}
+
+* {
+  all: unset;
+  display: revert;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  font-weight: 300;
+  background-color: var(--gray-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+  background-color: white;
+  display: flex;
+  width: 25rem;
+  padding: 2em 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--default-shadow);
+  border-radius: var(--default-border-radius);
+}
+
+.content > * {
+  width: 80%;
+}
+
+.content > .app-details,
+.content > .button {
+  margin-top: 2em;
+}
+
+.content > .header > .title {
+  font-size: 2em;
+  font-weight: 400;
+  text-align: left;
+  width: 100%;
+}
+
+.content > .header > .description {
+  font-size: 1em;
+  width: 100%;
+  margin-top: 0.5em;
+  line-height: 1.5em;
+}
+
+.app-details {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5em 0;
+  border-top: 1px solid #DDEDFF;
+  border-bottom: 1px solid #DDEDFF;
+}
+
+.app-details > .icon {
+  height: 4em;
+}
+
+
+.app-details > .metadata {
+  list-style: none;
+}
+
+.app-details > .metadata > .item {
+  color: var(--dark-color);
+  font-size: 0.8em;
+  line-height: 1.3em;
+}
+.app-details > .metadata > .name {
+  color: black;
+  font-weight: 400;
+  font-size: 1.3em;
+}
+
+.itsmagic-information {
+  margin: 1em;
+  text-align: center;
+}
+
+.button {
+  position: relative;
+  color: white;
+  border-radius: var(--default-border-radius);
+  display: inline-flex;
+  padding: 0.9em 0.5em;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  box-shadow: var(--default-shadow);
+}
+
+.button > .icon {
+  height: 1.5em;
+  position: absolute;
+  left: 0.5em;
+}
+
+.button.--primary {
+  background-color: var(--primary-color);
+}
+
+.button.--primary:hover {
+  background-color: var(--primary-darker-color);
+}
+
+.button.--secondary {
+  background-color: var(--secondary-color);
+}
+
+.button.--secondary:hover {
+  background-color: var(--secondary-darker-color);
+}
+
+.button:hover {
+  background-color: var(--primary-darker-color);
+  cursor: pointer;
+}
+
+.--transition {
+  transition: all ease-in-out 100ms;
+}
+.--transition:hover {
+  transition: all ease-in-out 100ms;
+}
+
+.itsmagic-information {
+  font-size: 0.8em;
+  color: 434343;
+}
+.itsmagic-information a {
+  font-weight: 600;
+  cursor: pointer;
+  color: #36009b;
+}
+
+.error-message {
+  font-size: 1.4em;
+  width: 80%;
+}
